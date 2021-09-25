@@ -1,8 +1,13 @@
 # Changelog
 
-## [Unreleased](https://github.com/pheature-flags/pheature-flags/tree/HEAD)
+## [v0.1.2](https://github.com/pheature-flags/pheature-flags/tree/v0.1.2) (2021-09-25)
 
-[Full Changelog](https://github.com/pheature-flags/pheature-flags/compare/v0.1.1...HEAD)
+**Closed issues:**
+
+- [#261][toggle-model] install composer unused in toggle-model package (@kpicaza)
+- [#261][toggle-model] Add factory classes (@kpicaza)
+
+[Full Changelog](https://github.com/pheature-flags/pheature-flags/compare/v0.1.1...v0.1.2)
 
 ## [v0.1.1](https://github.com/pheature-flags/pheature-flags/tree/v0.1.1) (2021-06-20)
 
