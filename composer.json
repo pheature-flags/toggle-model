@@ -58,5 +58,10 @@
     },
     "config": {
         "sort-packages": true
+    },
+    "extra": {
+        "laminas": {
+            "config-provider": "Pheature\\Model\\Toggle\\Container\\ConfigProvider"
+        }
     }
 }
