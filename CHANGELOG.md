@@ -2,11 +2,23 @@
 
 ## [Unreleased](https://github.com/pheature-flags/toggle-model/tree/HEAD)
 
-[Full Changelog](https://github.com/pheature-flags/toggle-model/compare/0.2.0...HEAD)
+[Full Changelog](https://github.com/pheature-flags/toggle-model/compare/v0.2.1...HEAD)
+
+**Fixed bugs:**
+
+- Unable to load SegmentFactory from container in a Mezzio project [\#13](https://github.com/pheature-flags/toggle-model/issues/13)
+
+## [v0.2.1](https://github.com/pheature-flags/toggle-model/tree/v0.2.1) (2021-11-02)
+
+[Full Changelog](https://github.com/pheature-flags/toggle-model/compare/0.2.0...v0.2.1)
 
 **Implemented enhancements:**
 
 - Update `pheature/toggle-core` version to `^0.2`  [\#9](https://github.com/pheature-flags/toggle-model/issues/9)
+
+**Fixed bugs:**
+
+- Unable to load SegmentFactory from container in a Mezzio project [\#14](https://github.com/pheature-flags/toggle-model/pull/14) (@xserrat)
 
 ## [0.2.0](https://github.com/pheature-flags/toggle-model/tree/0.2.0) (2021-10-08)
 
