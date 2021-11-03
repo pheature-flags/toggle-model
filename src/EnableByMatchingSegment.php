@@ -43,7 +43,12 @@ final class EnableByMatchingSegment implements ToggleStrategy
     }
 
     /**
-     * @return array<string, string|array>
+     * @return array<string, string|array<string, string|array<string, mixed>>>
+     * @psalm-return array{
+     *   id: string,
+     *   segments: array<array-key, array<string, array<array-key, mixed>|string>>,
+     *   type: "enable_by_matching_segment"
+     * }
      */
     public function toArray(): array
     {
@@ -58,7 +63,12 @@ final class EnableByMatchingSegment implements ToggleStrategy
     }
 
     /**
-     * @return array<string, string|array>
+     * @return array<string, string|array<string, string|array<string, mixed>>>
+     * @psalm-return array{
+     *   id: string,
+     *   segments: array<array-key, array<string, array<array-key, mixed>|string>>,
+     *   type: "enable_by_matching_segment"
+     * }
      */
     public function jsonSerialize(): array
     {
