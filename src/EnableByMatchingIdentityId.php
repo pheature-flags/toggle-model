@@ -51,6 +51,9 @@ final class EnableByMatchingIdentityId implements ToggleStrategy
         return false;
     }
 
+    /**
+     * @return array<string, string|array<string|array<string, mixed>>>
+     */
     public function toArray(): array
     {
         return [
@@ -64,7 +67,7 @@ final class EnableByMatchingIdentityId implements ToggleStrategy
     }
 
     /**
-     * @return array<string, string|array>
+     * @return array<string, string|array< string|array<string, mixed>>>
      */
     public function jsonSerialize(): array
     {

@@ -65,7 +65,7 @@ final class StrictMatchingSegment implements Segment
     }
 
     /**
-     * @return array<string, string|array>
+     * @return array<string, string|array<string, mixed>>
      */
     public function toArray(): array
     {
@@ -77,7 +77,7 @@ final class StrictMatchingSegment implements Segment
     }
 
     /**
-     * @return array<string, string|array>
+     * @return array<string, string|array<string, mixed>>
      */
     public function jsonSerialize(): array
     {

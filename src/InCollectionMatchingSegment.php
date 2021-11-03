@@ -74,6 +74,9 @@ class InCollectionMatchingSegment implements Segment
         return $payloadValue === $criterionValue;
     }
 
+    /**
+     * @return array<string, string|array<string, mixed>>
+     */
     public function toArray(): array
     {
         return [
@@ -83,6 +86,9 @@ class InCollectionMatchingSegment implements Segment
         ];
     }
 
+    /**
+     * @return array<string, string|array<string, mixed>>
+     */
     public function jsonSerialize()
     {
         return $this->toArray();
