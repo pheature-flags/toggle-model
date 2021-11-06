@@ -6,19 +6,17 @@ namespace Pheature\Model\Toggle;
 
 use Pheature\Core\Toggle\Read\Segment;
 
+/**
+ * @psalm-import-type SegmentPayload from Segment
+ */
 class InCollectionMatchingSegment implements Segment
 {
     public const NAME = 'in_collection_matching_segment';
     private string $id;
-    /** @var array<string, mixed> */
+    /** @var SegmentPayload */
     private array $criteria;
 
-    /**
-     * InCollectionMatchingSegment constructor.
-     *
-     * @param string $id
-     * @param array<string, mixed> $criteria
-     */
+    /** @param SegmentPayload $criteria */
     public function __construct(string $id, array $criteria)
     {
         $this->id = $id;
@@ -63,7 +61,6 @@ class InCollectionMatchingSegment implements Segment
     /**
      * @param mixed $payloadValue
      * @param mixed $criterionValue
-     * @return bool
      */
     private function isAMatch($payloadValue, $criterionValue): bool
     {
@@ -74,9 +71,6 @@ class InCollectionMatchingSegment implements Segment
         return $payloadValue === $criterionValue;
     }
 
-    /**
-     * @return array<string, string|array<string, mixed>>
-     */
     public function toArray(): array
     {
         return [
@@ -86,10 +80,7 @@ class InCollectionMatchingSegment implements Segment
         ];
     }
 
-    /**
-     * @return array<string, string|array<string, mixed>>
-     */
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return $this->toArray();
     }

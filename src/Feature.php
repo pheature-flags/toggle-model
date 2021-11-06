@@ -38,9 +38,6 @@ final class Feature implements IFeature
         return $this->enabled;
     }
 
-    /**
-     * @return array<string, string|bool|mixed>
-     */
     public function jsonSerialize(): array
     {
         return [
