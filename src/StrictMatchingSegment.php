@@ -6,21 +6,17 @@ namespace Pheature\Model\Toggle;
 
 use Pheature\Core\Toggle\Read\Segment;
 
+/**
+ * @psalm-import-type SegmentPayload from Segment
+ */
 final class StrictMatchingSegment implements Segment
 {
     public const NAME = 'strict_matching_segment';
     private string $id;
-    /**
-     * @var array<string, mixed>
-     */
+    /** @var SegmentPayload */
     private array $criteria;
 
-    /**
-     * Segment constructor.
-     *
-     * @param string               $id
-     * @param array<string, mixed> $criteria
-     */
+    /** @param SegmentPayload $criteria */
     public function __construct(string $id, array $criteria)
     {
         $this->id = $id;
@@ -37,9 +33,6 @@ final class StrictMatchingSegment implements Segment
         return self::NAME;
     }
 
-    /**
-     * @return array<string, mixed>
-     */
     public function criteria(): array
     {
         return $this->criteria;
@@ -49,9 +42,7 @@ final class StrictMatchingSegment implements Segment
     {
         $match = false;
 
-        /**
-         * @var mixed $value
-         */
+        /** @var mixed $value */
         foreach ($this->criteria as $key => $value) {
             if (array_key_exists($key, $payload) && $value === $payload[$key]) {
                 $match = true;
@@ -64,9 +55,6 @@ final class StrictMatchingSegment implements Segment
         return $match;
     }
 
-    /**
-     * @return array<string, string|array<string, mixed>>
-     */
     public function toArray(): array
     {
         return [
@@ -76,9 +64,6 @@ final class StrictMatchingSegment implements Segment
         ];
     }
 
-    /**
-     * @return array<string, string|array<string, mixed>>
-     */
     public function jsonSerialize(): array
     {
         return $this->toArray();

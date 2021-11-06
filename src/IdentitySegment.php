@@ -6,21 +6,17 @@ namespace Pheature\Model\Toggle;
 
 use Pheature\Core\Toggle\Read\Segment;
 
+/**
+ * @psalm-import-type SegmentPayload from Segment
+ */
 final class IdentitySegment implements Segment
 {
     public const NAME = 'identity_segment';
     private string $id;
-    /**
-     * @var array<string, mixed>
-     */
+    /** @var SegmentPayload */
     private array $criteria;
 
-    /**
-     * Segment constructor.
-     *
-     * @param string               $id
-     * @param array<string, mixed> $criteria
-     */
+    /** @param SegmentPayload $criteria */
     public function __construct(string $id, array $criteria)
     {
         $this->id = $id;
@@ -37,9 +33,6 @@ final class IdentitySegment implements Segment
         return self::NAME;
     }
 
-    /**
-     * @return array<string, mixed>
-     */
     public function criteria(): array
     {
         return $this->criteria;
@@ -57,9 +50,6 @@ final class IdentitySegment implements Segment
         return in_array($identityId, $this->criteria, true);
     }
 
-    /**
-     * @return array<string, string|array<string, mixed>>
-     */
     public function toArray(): array
     {
         return [
@@ -69,9 +59,6 @@ final class IdentitySegment implements Segment
         ];
     }
 
-    /**
-     * @return array<string, string|array<string, mixed>>
-     */
     public function jsonSerialize(): array
     {
         return $this->toArray();
