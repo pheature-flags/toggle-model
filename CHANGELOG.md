@@ -1,12 +1,25 @@
 # Changelog
 
-## [Unreleased](https://github.com/pheature-flags/toggle-model/tree/HEAD)
+## [0.2.2](https://github.com/pheature-flags/toggle-model/tree/0.2.2) (2021-11-07)
 
-[Full Changelog](https://github.com/pheature-flags/toggle-model/compare/v0.2.1...HEAD)
+[Full Changelog](https://github.com/pheature-flags/toggle-model/compare/v0.2.1...0.2.2)
+
+**Implemented enhancements:**
+
+- \[toggle-model\] Update PhpStan to version 1 and level 9 [\#16](https://github.com/pheature-flags/toggle-model/issues/16)
+- \[\#16\] Update PhpStan to version 1 and level 9 [\#17](https://github.com/pheature-flags/toggle-model/pull/17) (@kpicaza)
 
 **Fixed bugs:**
 
 - Unable to load SegmentFactory from container in a Mezzio project [\#13](https://github.com/pheature-flags/toggle-model/issues/13)
+
+**Closed issues:**
+
+- \[toggle-model\] update CI matrix PHP versions [\#18](https://github.com/pheature-flags/toggle-model/issues/18)
+
+**Merged pull requests:**
+
+- \[\#18\] Run CI both PHP 7.4 and 8.0 [\#19](https://github.com/pheature-flags/toggle-model/pull/19) (@kpicaza)
 
 ## [v0.2.1](https://github.com/pheature-flags/toggle-model/tree/v0.2.1) (2021-11-02)
 
