@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.0](https://github.com/pheature-flags/toggle-model/tree/0.3.0) (2021-11-20)
+
+[Full Changelog](https://github.com/pheature-flags/toggle-model/compare/0.2.2...0.3.0)
+
+**Implemented enhancements:**
+
+- \[toggle-model\] Add PHP 8.1 support [\#12](https://github.com/pheature-flags/toggle-model/issues/12)
+- \[\#12\] Add support for PHP 8.1 [\#20](https://github.com/pheature-flags/toggle-model/pull/20) (@kpicaza)
+
 ## [0.2.2](https://github.com/pheature-flags/toggle-model/tree/0.2.2) (2021-11-07)
 
 [Full Changelog](https://github.com/pheature-flags/toggle-model/compare/v0.2.1...0.2.2)
