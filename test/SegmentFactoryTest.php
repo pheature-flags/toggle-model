@@ -28,7 +28,7 @@ final class SegmentFactoryTest extends TestCase
     {
         $factory = new SegmentFactory();
 
-        self::assertSame([
+        $this->assertSame([
             self::STRICT_MATCHING_SEGMENT,
             self::IDENTITY_SEGMENT,
             self::IN_COLLECTION_MATCHING_SEGMENT,
@@ -48,7 +48,7 @@ final class SegmentFactoryTest extends TestCase
         $factory = new SegmentFactory();
 
         $segment = $factory->create(self::SEGMENT_ID, self::STRICT_MATCHING_SEGMENT, self::CRITERIA);
-        self::assertInstanceOf(StrictMatchingSegment::class, $segment);
+        $this->assertInstanceOf(StrictMatchingSegment::class, $segment);
     }
 
     public function testItShouldCreateInstancesOfIdentitySegment(): void
@@ -56,7 +56,7 @@ final class SegmentFactoryTest extends TestCase
         $factory = new SegmentFactory();
 
         $segment = $factory->create(self::SEGMENT_ID, self::IDENTITY_SEGMENT, self::CRITERIA);
-        self::assertInstanceOf(IdentitySegment::class, $segment);
+        $this->assertInstanceOf(IdentitySegment::class, $segment);
     }
 
     public function testItShouldCreateInstancesOfInCollectionMatchingSegment(): void
@@ -64,6 +64,6 @@ final class SegmentFactoryTest extends TestCase
         $factory = new SegmentFactory();
 
         $segment = $factory->create(self::SEGMENT_ID, self::IN_COLLECTION_MATCHING_SEGMENT, self::CRITERIA);
-        self::assertInstanceOf(InCollectionMatchingSegment::class, $segment);
+        $this->assertInstanceOf(InCollectionMatchingSegment::class, $segment);
     }
 }

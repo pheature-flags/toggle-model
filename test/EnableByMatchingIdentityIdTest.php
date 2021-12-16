@@ -31,9 +31,9 @@ final class EnableByMatchingIdentityIdTest extends TestCase
         ]));
 
         $strategy = new EnableByMatchingIdentityId(self::STRATEGY_ID, $segments);
-        self::assertTrue($strategy->isSatisfiedBy(new Identity('some_id')));
-        self::assertSame(self::STRATEGY_ID, $strategy->id());
-        self::assertSame('enable_by_matching_identity_id', $strategy->type());
+        $this->assertTrue($strategy->isSatisfiedBy(new Identity('some_id')));
+        $this->assertSame(self::STRATEGY_ID, $strategy->id());
+        $this->assertSame('enable_by_matching_identity_id', $strategy->type());
     }
 
     public function testItShouldNotBeSatisfiedWithoutAnyIdentitySegment(): void
@@ -41,7 +41,7 @@ final class EnableByMatchingIdentityIdTest extends TestCase
         $segments = new Segments();
 
         $strategy = new EnableByMatchingIdentityId(self::STRATEGY_ID, $segments);
-        self::assertFalse($strategy->isSatisfiedBy(new Identity('some_id', [
+        $this->assertFalse($strategy->isSatisfiedBy(new Identity('some_id', [
             'some_id',
         ])));
     }
@@ -53,7 +53,7 @@ final class EnableByMatchingIdentityIdTest extends TestCase
         ]));
 
         $strategy = new EnableByMatchingIdentityId(self::STRATEGY_ID, $segments);
-        self::assertFalse($strategy->isSatisfiedBy(new Identity('some_other_id')));
+        $this->assertFalse($strategy->isSatisfiedBy(new Identity('some_other_id')));
     }
 
     public function testItShouldBeSerializedAsArray(): void
@@ -63,7 +63,7 @@ final class EnableByMatchingIdentityIdTest extends TestCase
         ]));
 
         $strategy = new EnableByMatchingIdentityId(self::STRATEGY_ID, $segments);
-        self::assertSame([
+        $this->assertSame([
             'id' => 'our_strategy',
             'type' => EnableByMatchingIdentityId::NAME,
             'segments' => [

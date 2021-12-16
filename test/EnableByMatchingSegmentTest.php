@@ -20,9 +20,9 @@ final class EnableByMatchingSegmentTest extends TestCase
         $segments = new Segments(new StrictMatchingSegment('users_from_barcelona', $criteria));
 
         $strategy = new EnableByMatchingSegment(self::STRATEGY_ID, $segments);
-        self::assertTrue($strategy->isSatisfiedBy(new Identity('some_id', $criteria)));
-        self::assertSame(self::STRATEGY_ID, $strategy->id());
-        self::assertSame('enable_by_matching_segment', $strategy->type());
+        $this->assertTrue($strategy->isSatisfiedBy(new Identity('some_id', $criteria)));
+        $this->assertSame(self::STRATEGY_ID, $strategy->id());
+        $this->assertSame('enable_by_matching_segment', $strategy->type());
     }
 
     public function testItShouldNotBeSatisfiedByUnMatchingSegment(): void
@@ -32,7 +32,7 @@ final class EnableByMatchingSegmentTest extends TestCase
         ]));
 
         $strategy = new EnableByMatchingSegment(self::STRATEGY_ID, $segments);
-        self::assertFalse($strategy->isSatisfiedBy(new Identity('some_id', [
+        $this->assertFalse($strategy->isSatisfiedBy(new Identity('some_id', [
             'location' => 'bilbo',
         ])));
     }
@@ -42,7 +42,7 @@ final class EnableByMatchingSegmentTest extends TestCase
         $segments = new Segments();
 
         $strategy = new EnableByMatchingSegment(self::STRATEGY_ID, $segments);
-        self::assertFalse($strategy->isSatisfiedBy(new Identity('some_id', [
+        $this->assertFalse($strategy->isSatisfiedBy(new Identity('some_id', [
             'location' => 'bilbo',
         ])));
     }
@@ -52,7 +52,7 @@ final class EnableByMatchingSegmentTest extends TestCase
         $segments = new Segments(new StrictMatchingSegment('users_from_barcelona', []));
 
         $strategy = new EnableByMatchingSegment(self::STRATEGY_ID, $segments);
-        self::assertFalse($strategy->isSatisfiedBy(new Identity('some_id', [
+        $this->assertFalse($strategy->isSatisfiedBy(new Identity('some_id', [
             'location' => 'bilbo',
         ])));
     }
@@ -64,7 +64,7 @@ final class EnableByMatchingSegmentTest extends TestCase
         ]));
 
         $strategy = new EnableByMatchingSegment(self::STRATEGY_ID, $segments);
-        self::assertSame([
+        $this->assertSame([
             'id' => 'an_strategy',
             'type' => EnableByMatchingSegment::NAME,
             'segments' => [
