@@ -17,11 +17,11 @@ final class StrictMatchingSegmentTest extends TestCase
     {
         $segment = new StrictMatchingSegment(self::SEGMENT_ID, $criteria);
 
-        self::assertFalse($segment->match($payload));
-        self::assertSame(self::SEGMENT_ID, $segment->id());
-        self::assertSame('strict_matching_segment', $segment->type());
-        self::assertSame($criteria, $segment->criteria());
-        self::assertSame([
+        $this->assertFalse($segment->match($payload));
+        $this->assertSame(self::SEGMENT_ID, $segment->id());
+        $this->assertSame('strict_matching_segment', $segment->type());
+        $this->assertSame($criteria, $segment->criteria());
+        $this->assertSame([
             'id' => self::SEGMENT_ID,
             'type' => 'strict_matching_segment',
             'criteria' => $criteria,
@@ -33,11 +33,11 @@ final class StrictMatchingSegmentTest extends TestCase
     {
         $segment = new StrictMatchingSegment(self::SEGMENT_ID, $criteria);
 
-        self::assertTrue($segment->match($payload));
-        self::assertSame(self::SEGMENT_ID, $segment->id());
-        self::assertSame('strict_matching_segment', $segment->type());
-        self::assertSame($criteria, $segment->criteria());
-        self::assertSame([
+        $this->assertTrue($segment->match($payload));
+        $this->assertSame(self::SEGMENT_ID, $segment->id());
+        $this->assertSame('strict_matching_segment', $segment->type());
+        $this->assertSame($criteria, $segment->criteria());
+        $this->assertSame([
             'id' => self::SEGMENT_ID,
             'type' => 'strict_matching_segment',
             'criteria' => $criteria,

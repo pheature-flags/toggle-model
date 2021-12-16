@@ -20,7 +20,7 @@ final class StrategyFactoryTest extends TestCase
     {
         $factory = new StrategyFactory();
 
-        self::assertSame([
+        $this->assertSame([
             self::SEGMENT_MATCHING_STRATEGY_TYPE,
             self::IDENTITY_MATCHING_STRATEGY_TYPE,
         ], $factory->types());
@@ -39,7 +39,7 @@ final class StrategyFactoryTest extends TestCase
         $factory = new StrategyFactory();
 
         $strategy = $factory->create(self::STRATEGY_ID, self::SEGMENT_MATCHING_STRATEGY_TYPE);
-        self::assertInstanceOf(EnableByMatchingSegment::class, $strategy);
+        $this->assertInstanceOf(EnableByMatchingSegment::class, $strategy);
     }
 
     public function testItShouldCreateInstancesOfEnableByMatchingIdentityStrategy(): void
@@ -47,6 +47,6 @@ final class StrategyFactoryTest extends TestCase
         $factory = new StrategyFactory();
 
         $strategy = $factory->create(self::STRATEGY_ID, self::IDENTITY_MATCHING_STRATEGY_TYPE);
-        self::assertInstanceOf(EnableByMatchingIdentityId::class, $strategy);
+        $this->assertInstanceOf(EnableByMatchingIdentityId::class, $strategy);
     }
 }
