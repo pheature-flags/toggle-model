@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.4.0](https://github.com/pheature-flags/toggle-model/tree/0.4.0)
+
+[Full Changelog](https://github.com/pheature-flags/toggle-model/compare/0.3.0...0.4.0)
+
+**Implemented enhancements:**
+
+- \[toggle-model\] Update issue template for bugs using new issue form in a YAML file [\#8](https://github.com/pheature-flags/toggle-model/issues/8)
+- Be consistency for assertion methods call [\#21](https://github.com/pheature-flags/toggle-model/pull/21) (@peter279k)
+
+**Merged pull requests:**
+
+- allow executing some composer plugins in dev mode [\#25](https://github.com/pheature-flags/toggle-model/pull/25) (@kpicaza)
+- \[\#8\] Update Bug Report Template [\#22](https://github.com/pheature-flags/toggle-model/pull/22) (@pcs289)
+
 ## [0.3.0](https://github.com/pheature-flags/toggle-model/tree/0.3.0) (2021-11-20)
 
 [Full Changelog](https://github.com/pheature-flags/toggle-model/compare/0.2.2...0.3.0)
