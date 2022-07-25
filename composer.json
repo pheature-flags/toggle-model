@@ -21,7 +21,7 @@
     },
     "require-dev": {
         "icanhazstring/composer-unused": "^0.7.5",
-        "infection/infection": "^0.25",
+        "infection/infection": "^0.25 || ^0.26",
         "phpcompatibility/php-compatibility": "^9.3",
         "phpro/grumphp": "^1.0",
         "phpstan/phpstan": "^1.0",
