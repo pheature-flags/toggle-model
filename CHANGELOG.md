@@ -1,6 +1,14 @@
 # Changelog
 
-## [0.4.0](https://github.com/pheature-flags/toggle-model/tree/0.4.0)
+## [0.5.0](https://github.com/pheature-flags/toggle-model/tree/0.5.0)
+
+[Full Changelog](https://github.com/pheature-flags/toggle-model/compare/0.4.0...0.5.0)
+
+**Merged pull requests:**
+
+- update changelog for version 0.5.0 [\#28](https://github.com/pheature-flags/toggle-model/pull/28) (@kpicaza)
+
+## [0.4.0](https://github.com/pheature-flags/toggle-model/tree/0.4.0) (2022-07-25)
 
 [Full Changelog](https://github.com/pheature-flags/toggle-model/compare/0.3.0...0.4.0)
 
@@ -67,11 +75,6 @@
 ## [v0.1.2](https://github.com/pheature-flags/toggle-model/tree/v0.1.2) (2021-09-25)
 
 [Full Changelog](https://github.com/pheature-flags/toggle-model/compare/v0.1.1...v0.1.2)
-
-**Closed issues**
-
-- [#261][toggle-model] install composer unused in toggle-model package (@kpicaza)
-- [#261][toggle-model] Add factory classes (@kpicaza)
 
 ## [v0.1.1](https://github.com/pheature-flags/toggle-model/tree/v0.1.1) (2021-06-20)
 
