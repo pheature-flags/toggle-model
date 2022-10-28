@@ -6,11 +6,12 @@ namespace Pheature\Model\Toggle;
 
 use Pheature\Core\Toggle\Read\Segment;
 use StellaMaris\Clock\ClockInterface;
+use Webmozart\Assert\Assert;
 
 /**
  * @psalm-import-type Criteria from DateTimeIntervalCriteria
  */
-class DateTimeIntervalStrictMatchingSegment implements Segment
+final class DateTimeIntervalStrictMatchingSegment implements Segment
 {
     public const NAME = 'datetime_strict_matching_segment';
     private string $id;
@@ -18,9 +19,20 @@ class DateTimeIntervalStrictMatchingSegment implements Segment
     private ClockInterface $clock;
     private StrictMatchingSegment $strictMatchingSegment;
 
-    /** @param Criteria $criteria */
+    /** @param array<mixed> $criteria */
     public function __construct(string $id, array $criteria, ClockInterface $now)
     {
+        Assert::keyExists($criteria, 'start_datetime');
+        Assert::notEmpty($criteria['start_datetime']);
+        Assert::string($criteria['start_datetime']);
+        Assert::keyExists($criteria, 'end_datetime');
+        Assert::notEmpty($criteria['end_datetime']);
+        Assert::string($criteria['end_datetime']);
+        Assert::keyExists($criteria, 'timezone');
+        Assert::string($criteria['timezone']);
+        Assert::keyExists($criteria, 'matches');
+        Assert::isArray($criteria['matches']);
+
         $this->id = $id;
         $this->criteria = DateTimeIntervalCriteria::fromRawCriteria($criteria);
         $this->clock = $now;
