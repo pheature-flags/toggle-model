@@ -2,11 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Pheature\Model\Toggle;
+namespace Pheature\Model\Toggle\SegmentType;
 
 use DateTimeImmutable;
 use DateTimeZone;
 use InvalidArgumentException;
+use Webmozart\Assert\Assert;
 
 /**
  * @psalm-type Criteria array{
@@ -35,9 +36,20 @@ final class DateTimeIntervalCriteria
         $this->matches = $matches;
     }
 
-    /** @param Criteria $criteria */
+    /** @param array<mixed> $criteria */
     public static function fromRawCriteria(array $criteria): self
     {
+        Assert::keyExists($criteria, 'start_datetime');
+        Assert::notEmpty($criteria['start_datetime']);
+        Assert::string($criteria['start_datetime']);
+        Assert::keyExists($criteria, 'end_datetime');
+        Assert::notEmpty($criteria['end_datetime']);
+        Assert::string($criteria['end_datetime']);
+        Assert::keyExists($criteria, 'timezone');
+        Assert::string($criteria['timezone']);
+        Assert::keyExists($criteria, 'matches');
+        Assert::isArray($criteria['matches']);
+
         try {
             $timezone = new DateTimeZone($criteria['timezone']);
         } catch (\Exception $exception) {

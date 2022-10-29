@@ -22,6 +22,7 @@
         "webmozart/assert": "^1.11"
     },
     "require-dev": {
+        "beste/clock": "^2.1",
         "icanhazstring/composer-unused": "^0.8",
         "phpcompatibility/php-compatibility": "^9.3",
         "phpro/grumphp": "^1.0",

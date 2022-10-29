@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Pheature\Test\Model\Toggle;
+namespace Pheature\Test\Model\Toggle\SegmentType;
 
 use DateTimeImmutable;
 use DateTimeZone;
 use Generator;
 use InvalidArgumentException;
-use Pheature\Model\Toggle\DateTimeIntervalStrictMatchingSegment;
+use Pheature\Model\Toggle\SegmentType\DateTimeIntervalStrictMatchingSegment;
 use PHPUnit\Framework\TestCase;
 use StellaMaris\Clock\ClockInterface;
 

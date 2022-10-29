@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Pheature\Model\Toggle;
+namespace Pheature\Model\Toggle\SegmentType;
 
 use Pheature\Core\Toggle\Read\Segment;
+use Pheature\Model\Toggle\StrictMatchingSegment;
 use StellaMaris\Clock\ClockInterface;
-use Webmozart\Assert\Assert;
 
 /**
  * @psalm-import-type Criteria from DateTimeIntervalCriteria
@@ -20,22 +20,11 @@ final class DateTimeIntervalStrictMatchingSegment implements Segment
     private StrictMatchingSegment $strictMatchingSegment;
 
     /** @param array<mixed> $criteria */
-    public function __construct(string $id, array $criteria, ClockInterface $now)
+    public function __construct(string $id, array $criteria, ClockInterface $clock)
     {
-        Assert::keyExists($criteria, 'start_datetime');
-        Assert::notEmpty($criteria['start_datetime']);
-        Assert::string($criteria['start_datetime']);
-        Assert::keyExists($criteria, 'end_datetime');
-        Assert::notEmpty($criteria['end_datetime']);
-        Assert::string($criteria['end_datetime']);
-        Assert::keyExists($criteria, 'timezone');
-        Assert::string($criteria['timezone']);
-        Assert::keyExists($criteria, 'matches');
-        Assert::isArray($criteria['matches']);
-
         $this->id = $id;
         $this->criteria = DateTimeIntervalCriteria::fromRawCriteria($criteria);
-        $this->clock = $now;
+        $this->clock = $clock;
         $this->strictMatchingSegment = new StrictMatchingSegment($id, $this->criteria->matches());
     }
 
