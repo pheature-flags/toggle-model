@@ -1,6 +1,14 @@
 # Changelog
 
-## [Unreleased](https://github.com/pheature-flags/toggle-model/tree/0.7.0)
+## [0.7.1](https://github.com/pheature-flags/toggle-model/tree/0.7.1)
+
+[Full Changelog](https://github.com/pheature-flags/toggle-model/compare/0.7.0...0.7.1)
+
+**Merged pull requests:**
+
+- \[symfony-toggle\#44\] update dependency constraints to ^0.7 [\#35](https://github.com/pheature-flags/toggle-model/pull/35) (@kpicaza)
+
+## [0.7.0](https://github.com/pheature-flags/toggle-model/tree/0.7.0) (2022-12-10)
 
 [Full Changelog](https://github.com/pheature-flags/toggle-model/compare/0.5.0...0.7.0)
 
