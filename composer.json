@@ -17,7 +17,7 @@
     ],
     "require": {
         "php": "^7.4|^8.0|^8.1|^8.2",
-        "pheature/toggle-core": "^0.5"
+        "pheature/toggle-core": "^0.5 || ^0.7"
     },
     "require-dev": {
         "icanhazstring/composer-unused": "^0.8",
