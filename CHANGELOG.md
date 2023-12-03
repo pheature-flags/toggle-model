@@ -1,6 +1,15 @@
 # Changelog
 
-## [0.7.1](https://github.com/pheature-flags/toggle-model/tree/0.7.1)
+## [Unreleased](https://github.com/pheature-flags/toggle-model/tree/0.8.0)
+
+[Full Changelog](https://github.com/pheature-flags/toggle-model/compare/0.7.1...0.8.0)
+
+**Merged pull requests:**
+
+- update psalm to 5.16 [\#38](https://github.com/pheature-flags/toggle-model/pull/38) (@kpicaza)
+- update php versions support [\#37](https://github.com/pheature-flags/toggle-model/pull/37) (@kpicaza)
+
+## [0.7.1](https://github.com/pheature-flags/toggle-model/tree/0.7.1) (2022-12-12)
 
 [Full Changelog](https://github.com/pheature-flags/toggle-model/compare/0.7.0...0.7.1)
 
