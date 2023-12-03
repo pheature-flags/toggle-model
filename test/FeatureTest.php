@@ -42,4 +42,19 @@ class FeatureTest extends TestCase
         $this->assertCount(3, $feature->strategies());
         $this->assertTrue($feature->isEnabled());
     }
+
+    public function testItJsonNormalization(): void
+    {
+        $feature = new Feature(
+            self::FEATURE_ID,
+            new ToggleStrategies(),
+            true
+        );
+
+        $this->assertSame([
+            'id' => self::FEATURE_ID,
+            'strategies' => [],
+            'enabled' => true
+        ], $feature->jsonSerialize());
+    }
 }
