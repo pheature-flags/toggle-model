@@ -81,6 +81,20 @@ final class StrictMatchingSegmentTest extends TestCase
             ],
         ];
 
+        yield 'strict matching multiple criteria with multiple fields and an incorrect one' => [
+            'criteria' => [
+                'user_type' => 'top',
+                'location' => 'barcelona',
+                'foo' => 'bar',
+            ],
+            'payload' => [
+                'location' => 'barcelona',
+                'user_type' => 'top',
+                'foo' => 'baz',
+            ],
+        ];
+
+
     }
 
     public function matchingPayloads(): Generator
@@ -98,8 +112,8 @@ final class StrictMatchingSegmentTest extends TestCase
                 'location' => 'barcelona',
             ],
             'payload' => [
-                'location' => 'barcelona',
                 'user_type' => 'top',
+                'location' => 'barcelona',
             ],
         ];
         yield 'strict matching multiple criteria with multiple fields' => [
